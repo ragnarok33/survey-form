@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey form</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1 id="title">TITLE</h1>
+        <p id="description">Description</p>
+        <form id="survey-form" action="" method="GET">
+            <div class="form-part">
+                <label for="name" id="name-label">Name</label>
+                <input id="name" name="name" type="text" placeholder="Enter your name" required><br>
+            </div>
+            <div>
+                <label for="email" id="email-label">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email" required><br>
+            </div>
+            <label for="number" id="number-label">Age</label>
+            <input id="number" name="name" type="number" min="1" max="120" placeholder="Enter your age"><br>
+            <label for="dropdown">Dropdown</label>
+            <select id="dropdown" name="dropdown">
+                <option value="" disabled="" selected="">Select</option>
+                <option value="option 1">Option 1</option>
+                <option value="option 2">Option 2</option>
+                <option value="option 3">Option 3</option>
+                <option value="option 4">Option 4</option>
+            </select><br>
+            <input type="radio" id="one" name="group" value="one">
+            <label for="one">Option one</label>
+            <input type="radio" id="two" name="group" value="two">
+            <label for="two">Option two</label>
+            <input type="radio" id="three" name="group" value="three">
+            <label for="three">Option three</label>
+            <input type="radio" id="four" name="group" value="four">
+            <label for="four">Option one</label><br>
+            <input type="checkbox" id="a" name="check" value="a">
+            <label for="a">Option a</label>
+            <input type="checkbox" id="b" name="check" value="b">
+            <label for="b">Option b</label>
+            <input type="checkbox" id="c" name="check" value="c">
+            <label for="c">Option c</label>
+            <input type="checkbox" id="d" name="check" value="d">
+            <label for="d">Option d</label><br>
+            <textarea>Enter text here</textarea><br>
+            <button type="submit" value="submit" id="submit">Submit</button>
+        </form>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
