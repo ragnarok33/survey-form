@@ -4,50 +4,110 @@
         <meta charset="UTF-8">
         <title>Survey form</title>
         <style>
+            html {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 1rem;
+            }
+            body {
+                background-color: #d3d3d3;
+            }
+            header {
+                text-align: center;
+            }
+            #survey-form {
+                background-color: #ba9595;
+                width: 50%;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            .form-part {
+                padding: 10px;
+                width: 100%;
+            }
+            label {
+                display: flex;
+                align-items: center;
+                padding-bottom: 10px;
+            }
+            input {
+                width: 90%;
+            }
+            option {
+                display: inline-block;
+            }
+            input[type="radio"] {
+                width: 10%;
+            }
+            input[type="checkbox"] {
+                width: 10%;
+            }
+            textarea {
+                width: 90%;
+                align-items: center;
+                height: 100px;
+            }
 
+            #dropdown {
+                width: 90%;
+            }
         </style>
     </head>
     <body>
-        <h1 id="title">TITLE</h1>
-        <p id="description">Description</p>
-        <form id="survey-form" action="" method="GET">
-            <div class="form-part">
-                <label for="name" id="name-label">Name</label>
-                <input id="name" name="name" type="text" placeholder="Enter your name" required><br>
-            </div>
-            <div>
-                <label for="email" id="email-label">Email</label>
-                <input id="email" name="email" type="email" placeholder="Enter your email" required><br>
-            </div>
-            <label for="number" id="number-label">Age</label>
-            <input id="number" name="name" type="number" min="1" max="120" placeholder="Enter your age"><br>
-            <label for="dropdown">Dropdown</label>
-            <select id="dropdown" name="dropdown">
-                <option value="" disabled="" selected="">Select</option>
-                <option value="option 1">Option 1</option>
-                <option value="option 2">Option 2</option>
-                <option value="option 3">Option 3</option>
-                <option value="option 4">Option 4</option>
-            </select><br>
-            <input type="radio" id="one" name="group" value="one">
-            <label for="one">Option one</label>
-            <input type="radio" id="two" name="group" value="two">
-            <label for="two">Option two</label>
-            <input type="radio" id="three" name="group" value="three">
-            <label for="three">Option three</label>
-            <input type="radio" id="four" name="group" value="four">
-            <label for="four">Option one</label><br>
-            <input type="checkbox" id="a" name="check" value="a">
-            <label for="a">Option a</label>
-            <input type="checkbox" id="b" name="check" value="b">
-            <label for="b">Option b</label>
-            <input type="checkbox" id="c" name="check" value="c">
-            <label for="c">Option c</label>
-            <input type="checkbox" id="d" name="check" value="d">
-            <label for="d">Option d</label><br>
-            <textarea>Enter text here</textarea><br>
-            <button type="submit" value="submit" id="submit">Submit</button>
-        </form>
+        <div class="container">
+            <header>
+                <h1 id="title">Survey form</h1>
+                <p id="description">Thank you for submitting the survey form</p>
+            </header>
+            <form id="survey-form" action="" method="GET">
+                <div class="form-part">
+                    <label for="name" id="name-label">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter your name" required><br>
+                </div>
+                <div class="form-part">
+                    <label for="email" id="email-label">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" required><br>
+                </div>
+                <div class="form-part">
+                    <label for="number" id="number-label">Age</label>
+                    <input id="number" name="name" type="number" min="1" max="120" placeholder="Enter your age"><br>
+                </div>
+                <div class="form-part">
+                    <label for="dropdown">Which option do you want?</label>
+                    <select id="dropdown" name="dropdown">
+                        <option value="" disabled="" selected="">Select</option>
+                        <option value="option 1">Option 1</option>
+                        <option value="option 2">Option 2</option>
+                        <option value="option 3">Option 3</option>
+                        <option value="option 4">Option 4</option>
+                    </select><br>
+                </div>
+                <div class="form-part">
+                    <p>Which of the four options do you identify most with?</p>
+                    
+                    <label for="one"><input type="radio" id="one" name="group" value="one">Option one</label>
+                    
+                    <label for="two"><input type="radio" id="two" name="group" value="two">Option two</label>
+                    
+                    <label for="three"><input type="radio" id="three" name="group" value="three">Option three</label>
+                    
+                    <label for="four"><input type="radio" id="four" name="group" value="four">Option four</label><br>
+                </div>
+                <div class="form-part">
+                    <p>Which of the four statements do you agree with?</p>
+                    
+                    <label for="a"><input type="checkbox" id="a" name="check" value="a">Option a</label>
+                    
+                    <label for="b"><input type="checkbox" id="b" name="check" value="b">Option b</label>
+                    
+                    <label for="c"><input type="checkbox" id="c" name="check" value="c">Option c</label>
+                    
+                    <label for="d"><input type="checkbox" id="d" name="check" value="d">Option d</label><br>
+                </div>
+                <p>Do you have something to tell us?</p>
+                <textarea>Enter text here</textarea><br>
+                <button type="submit" value="submit" id="submit">Submit</button>
+            </form>
+        </div>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
 </html>
